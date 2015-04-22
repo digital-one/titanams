@@ -1,0 +1,6 @@
+#diagram{
+	margin-bottom: 40px;
+	img{
+		@include fit-grid(width);
+	}
+}

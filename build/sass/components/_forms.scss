@@ -1,0 +1,222 @@
+input[type="text"], 
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea,
+.selectBox-dropdown{
+	line-height: 1;
+	height: 42px;
+	@extend %helvetica;
+	font-weight:400;
+	padding: 0 7px;
+	@include font-size(14);
+	@include border-radius(10px);
+	border: none;
+	width: 100%;
+	color: #333;
+	@include transition (background-color .1s linear 0s);
+	&:focus{
+		background-color: darken(white,10);
+	}
+	@include placeholder {
+    color: black;
+  }
+}
+textarea{
+	padding: 10px;
+	height: auto;
+	resize: none;
+}
+
+.popup-form{
+	min-width:300px;
+	h3{
+		color: black;
+	}
+	li{
+		margin-bottom: 10px;
+	}
+	input.button{
+		border:none;
+		background-color:black;
+		@include border-radius(5px);
+		height:30px;
+		line-height: 1;
+		padding: 0 10px;
+		color: white;
+		text-align: center;
+		&:hover,&:active{
+			background-color: black;
+		}
+	}
+}
+.validation_error,.validation_message{
+	color: white !important;
+	margin-bottom: 10px;
+}
+.validation_message{
+	margin: 3px 0 0;
+}
+
+//selectbox
+
+/*
+.selectBox-dropdown{
+	position: relative;
+	cursor: pointer;
+	&:hover, &:active, &:focus{
+		border-style: none;
+		background-color: darken(white,10);
+	}
+	&.selectBox-menuShowing{
+    	background-color: darken(white,10);
+    }
+    &.selectBox-menuShowing-bottom{
+
+    }
+    &.selectBox-menuShowing-top{
+    	
+    }
+	.selectBox-label{
+		height: 46px;
+		line-height: 46px;
+		@include font-size(14);
+		display: block;
+		font-family: $varela;
+		color: black;
+	}
+	.selectBox-arrow{
+		height: 17px;
+    	width: 27px;
+    	background: url('../images/selectbox-arrow.png') center center no-repeat;
+    	@include abs-pos(15px,15px,auto,auto);
+    	display: block;
+	}
+}
+.selectBox-dropdown-menu {
+    position: absolute;
+    z-index: 99999;
+    max-height: 200px;
+    min-height: 1em;
+    background: white !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    @include box-shadow(0 2px 6px rgba(0, 0, 0, .2));
+	&.selectBox-options{
+		li,a{
+			list-style: none;
+    		display: block;
+    		cursor: default;
+    		padding: 0;
+    		margin: 0;
+			text-align:left;
+		}
+		li{
+			&.selectBox-hover a {
+    			background-color: darken(black,10);
+    		}
+    		&.selectBox-selected a{
+    			//background-color: $green;
+    		}
+		}
+		a{
+			font-family: $helvetica;
+			@include font-size(12);
+			padding: 4px 10px;
+		}
+		&.selectBox-options-top{
+    		border-bottom:none;
+			margin-top:1px;
+		}
+		&.selectBox-options-bottom{
+
+		}
+		&.selectBox-optgroup {
+    		color: #666;
+    		background: #EEE;
+    		font-weight: bold;
+    		line-height: 1.5;
+    		padding: 0 .3em;
+    		white-space: nowrap;
+		}
+	}
+}
+.selectBox-inline { 
+    min-width: 150px;
+    outline: none;
+    border: solid 1px #BBB;
+    background: #FFF;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: auto;
+}
+*/
+
+//gravity forms
+
+.gform_wrapper{
+	margin:0;
+	padding: 0 15%;
+	@media screen and (max-width: $break-small) {
+		padding:0;
+	}
+	.gform_body{
+		@extend %clearfix;
+	}
+	.gform_footer{
+		text-align: center;
+		margin:20px 0 0;
+	}
+	li{
+		padding: 0 !important;
+		margin-bottom: 12px;
+		&:before{
+			background:none !important;
+		}
+		&#field_1_5{
+			@include span-columns(12);
+		}
+	}
+	label{
+		text-transform: uppercase;
+		color: $gold;
+		margin-bottom: 4px;
+		@include font-size(14);
+		display: block;
+		.gfield_required{
+			color: $gold;
+			padding-left:4px;
+		}
+	}
+	.button.gform_button{
+		@include font-size(16);
+		@extend %helvetica;
+		text-transform: uppercase;
+		background-color:$gold;
+		color: black;
+		padding:0 15px;
+		height:42px;
+		line-height: 1;
+		border:none;
+		@include border-radius(10px);
+		@include transition(background-color 0.3s ease-in-out);
+		&:hover,&:active{
+			background-color: white;
+		}
+	}
+}
+.gform_confirmation_message{
+	padding: 0 0 120px;
+	text-align: center;
+	h3{
+		@include font-size(30);
+		margin-bottom: 20px;
+	}
+	p{
+		color: white;
+	}
+}

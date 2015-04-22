@@ -1,0 +1,27 @@
+html,body{
+	width:100%;
+}
+html{
+	font-size: 62.5%;
+	overflow-y:scroll; 
+	&.home{
+		height: 100%;
+		overflow-y: hidden;
+	}
+}
+body{
+	@extend %helvetica;
+	font-size: 14px;
+	//@include font-size(14);
+	-webkit-backface-visibility: hidden;
+	line-height:160%;
+	color: white;
+	background-color: #41403e;
+	@include bg-cover;
+	&#contact-us{
+		background-size: 80% auto;
+	}
+	&#home{
+		height:100%;
+	}
+}

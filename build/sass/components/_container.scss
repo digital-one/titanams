@@ -1,0 +1,41 @@
+#wrap{
+	width:100%;
+	position: relative;
+	#home &{
+		height:100%
+	}
+}
+.container{
+	@include outer-container;
+	position: relative;
+}
+#main{
+	margin-bottom:110px;
+	.inner{
+		@include span-columns(8);
+		@include shift(2);
+		@media screen and (max-width: $break-medium) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@media screen and (max-width: $break-small) {
+			@include span-columns(12);
+			@include shift(0);
+			padding:0 15px;
+
+		}
+	}
+	@media screen and(max-width: $break-medium){
+		margin-bottom:60px;
+	}
+}
+.column{
+	@include span-columns(6);
+	@media screen and (max-width: $break-small) {
+		@include span-columns(12);
+		margin-bottom:30px;
+		&:last-child{
+			margin:0;
+		}
+	}
+}

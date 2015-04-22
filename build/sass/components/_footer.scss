@@ -1,0 +1,47 @@
+#footer{
+	z-index:2;
+	text-align:center;
+	position: relative;
+	width:100%;
+	display: block;
+	margin-bottom:20px;
+	@media screen and (max-width: $break-small) {
+		margin-bottom:10px;
+		padding:0 10px;
+	}
+	#home &{
+		@include abs-pos(auto,auto,0,0);
+	}
+	p{
+		margin-bottom: 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		@include font-size(21);
+		@media screen and (max-width: $break-medium) {
+			@include font-size(18);
+		}
+		@media screen and (max-width: $break-small) {
+			@include font-size(16);
+			margin-bottom: 5px;
+		}
+		@media screen and (max-width: $break-xsmall) {
+			@include font-size(14);
+		}
+		span{
+			display: inline-block;
+			margin:0 15px;
+			line-height: 130%;
+		}
+	}
+	.contacts{
+		margin-bottom: 20px;
+		p{
+			line-height: 100%;
+		}
+	}
+	small{
+		display: block;
+		line-height: 140%;
+	}
+}

@@ -1,0 +1,55 @@
+//neat overrides
+$max-width: 1400px; //overide neat outer container width
+$visual-grid: false; 
+$grid-columns: 12 !default;
+
+//colours
+
+$gold: #C5B06C;
+
+//font face
+
+@font-face {
+    font-family:'ACaslonPro-Regular';
+    src: url('../fonts/ACaslonPro-Regular_gdi.eot');
+    src: url('../fonts/ACaslonPro-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ACaslonPro-Regular_gdi.woff') format('woff'),
+        url('../fonts/ACaslonPro-Regular_gdi.ttf') format('truetype'),
+        url('../fonts/ACaslonPro-Regular_gdi.svg#ACaslonPro-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family: 'ACaslonPro-Italic_gdi';
+    src: url('../fonts/ACaslonPro-Italic_gdi.eot');
+    src: url('../fonts/ACaslonPro-Italic_gdi.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ACaslonPro-Italic_gdi.woff') format('woff'),
+         url('../fonts/ACaslonPro-Italic_gdi.ttf') format('truetype'),
+         url('../fonts/ACaslonPro-Italic_gdi.svg#ACaslonPro-Italic_gdi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'ACaslonPro-Italic_gdi';
+        src: url('../fonts/ACaslonPro-Italic_gdi.svg#ACaslonPro-Italic_gdi') format('svg');
+    }
+}
+
+
+
+//fonts
+$caslonpro: "ACaslonPro-Regular", sans-serif;
+$caslonpro-italic: "ACaslonPro-Italic_gdi", sans-serif;
+
+//break points
+$break-xsmall: 374px; //small mobile
+$break-small: 659px; //mobile
+$break-medium: 899px; //ipad 
+$break-large: 1199px; //desktop
+
+//spacing
+$vertical-space: 60px;
